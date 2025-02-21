@@ -16,10 +16,15 @@ namespace QueryString_19796703
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            Response.Redirect
-                (
-                "ProductionConfirmQueryStrings.aspx" +
-                "?ddlCategory=" + ddlCategory.SelectedValue +
+            
+        }
+
+		protected void btnConfirm_Click(object sender, EventArgs e)
+		{
+			Response.Redirect
+				(
+				"ProductionConfirmQueryStrings.aspx" +
+				"?ddlCategory=" + ddlCategory.SelectedValue +
 				"&ddlSupplier=" + ddlSupplier.SelectedValue +
 				"&strProduct=" + txtProduct.Text +
 				"&strDescription=" + TextArea1.InnerText +
@@ -29,6 +34,6 @@ namespace QueryString_19796703
 				"&bytNumberOnOrder=" + txtNumberOnOrder.Text +
 				"&bytReorderLevel=" + txtReorderLevel.Text
 				);
-        }
-    }
+		}
+	}
 }
